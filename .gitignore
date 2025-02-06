@@ -1,0 +1,78 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/user-mngt-frontend-app/dist
+/user-mngt-frontend-app/tmp
+/user-mngt-frontend-app/out-tsc
+/user-mngt-frontend-app/bazel-out
+
+# Node
+/user-mngt-frontend-app/node_modules
+/user-mngt-frontend-app/npm-debug.log
+/user-mngt-frontend-app/yarn-error.log
+
+# IDEs and editors
+/user-mngt-frontend-app/.idea/
+/user-mngt-frontend-app/.project
+/user-mngt-frontend-app/.classpath
+/user-mngt-frontend-app/.c9/
+/user-mngt-frontend-app/*.launch
+/user-mngt-frontend-app/.settings/
+/user-mngt-frontend-app/*.sublime-workspace
+
+# Visual Studio Code
+/user-mngt-frontend-app/.vscode/*
+/user-mngt-frontend-app/!.vscode/settings.json
+/user-mngt-frontend-app/!.vscode/tasks.json
+/user-mngt-frontend-app/!.vscode/launch.json
+/user-mngt-frontend-app/!.vscode/extensions.json
+/user-mngt-frontend-app/.history/*
+
+# Miscellaneous
+/user-mngt-frontend-app/.angular/cache
+/user-mngt-frontend-app.sass-cache/
+/user-mngt-frontend-app/connect.lock
+/user-mngt-frontend-app/coverage
+/user-mngt-frontend-app/libpeerconnection.log
+/user-mngt-frontend-apptestem.log
+/user-mngt-frontend-app/typings
+
+# System files
+/user-mngt-frontend-app/.DS_Store
+/user-mngt-frontend-app/Thumbs.db
+
+
+/user-management-app-backend/HELP.md
+/user-management-app-backend/target/
+/user-management-app-backend/!.mvn/wrapper/maven-wrapper.jar
+/user-management-app-backend/!**/src/main/**/target/
+/user-management-app-backend/!**/src/test/**/target/
+
+### STS ###
+/user-management-app-backend/.apt_generated
+/user-management-app-backend/.classpath
+/user-management-app-backend/.factorypath
+/user-management-app-backend/.project
+/user-management-app-backend/.settings
+/user-management-app-backend/.springBeans
+/user-management-app-backend/.sts4-cache
+
+### IntelliJ IDEA ###
+/user-management-app-backend/.idea
+/user-management-app-backend/*.iws
+/user-management-app-backend/*.iml
+/user-management-app-backend/*.ipr
+
+### NetBeans ###
+/user-management-app-backend/nbproject/private/
+/user-management-app-backend/nbbuild/
+/user-management-app-backend/dist/
+/user-management-app-backend/nbdist/
+/user-management-app-backend/.nb-gradle/
+/user-management-app-backend/build/
+/user-management-app-backend/!**/src/main/**/build/
+/user-management-app-backend/!**/src/test/**/build/
+
+### VS Code ###
+/user-management-app-backend/.vscode/
+
