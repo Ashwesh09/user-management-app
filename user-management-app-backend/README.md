@@ -26,7 +26,7 @@ Execute the following command to start the application:
 mvn spring-boot:run
 ```
 
-By default, the application runs on `http://localhost:8081`.
+By default, the application runs on `http://localhost:8080`.
 
 ## Configuration
 Application properties are defined in `src/main/resources/application.properties`.
@@ -39,35 +39,35 @@ Modify them as needed before running the application.
 ### Load Data
 **GET /load**
 ```
-http://localhost:8081/api/users/load
+http://localhost:8080/api/users/load
 ```
 Loads data from [https://dummyjson.com/users](https://dummyjson.com/users) and stores it in the H2 database.
 
 ### Search Users
 **GET /search**
 ```
-http://localhost:8081/api/users/search
+http://localhost:8080/api/users/search
 ```
 Search users based on `firstName`, `lastName`, and `ssn`.
 
 ### Get All Users
 **GET /get-all-users**
 ```
-http://localhost:8081/api/users/get-all-users
+http://localhost:8080/api/users/get-all-users
 ```
 Retrieves all users from the database.
 
 ### Get User by ID
 **GET /get-by-id**
 ```
-http://localhost:8081/api/users/get-by-id
+http://localhost:8080/api/users/get-by-id
 ```
 Fetches a user by their ID.
 
 ### Get User by Email
 **GET /get-by-email**
 ```
-http://localhost:8081/api/users/get-by-email
+http://localhost:8080/api/users/get-by-email
 ```
 Retrieves users by email.
 

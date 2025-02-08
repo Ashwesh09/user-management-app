@@ -1,88 +1,63 @@
-# Spring Boot Application
+# User Management System
+
+A simple user management system that loads data from [dummyjson.com/users](https://dummyjson.com/users), stores it in an in-memory database, and provides a UI for searching users by first name, last name, and SSN. Clicking on a user displays detailed information.
+
+## Features
+
+- Fetch users from an external API
+- Store user data in an in-memory database
+- Search users by first name, last name, and SSN
+- Display user details on selection
+- Built with Angular (Frontend) and Spring Boot (Backend)
+
+## Repository Structure
+
+```
+repo-root/
+├── frontend/    # Angular application with Angular Material
+├── backend/     # Spring Boot backend with in-memory database
+├── README.md    # This file
+└── ...
+```
 
 ## Prerequisites
-Ensure you have the following installed before running the application:
-- **Java 17**
-- **Maven 3.8.7**
-- **Spring Boot** (configured via `pom.xml`)
 
-## Getting Started
+- Node.js (for frontend)
+- Angular CLI
+- Java 17+ (for backend)
+- Maven or Gradle (for backend dependencies)
 
-### Clone the Repository
-```sh
-git clone <repository-url>
-cd <project-directory>
-```
+## Installation & Running
 
-### Build the Project
-Run the following command to build the application:
-```sh
-mvn clean install
-```
+1. Clone the repository:
+   ```sh
+   git clone <repository-url>
+   cd repo-root
+   ```
 
-### Run the Application
-Execute the following command to start the application:
-```sh
-mvn spring-boot:run
-```
+2. Start the backend:
+   ```sh
+   cd backend
+   ./mvnw spring-boot:run
+   ```
+   The backend will be available at `http://localhost:8080/`.
 
-By default, the application runs on `http://localhost:8081`.
+3. Start the frontend:
+   ```sh
+   cd frontend
+   npm install
+   ng serve
+   ```
+   The frontend will be available at `http://localhost:4200/`.
 
-## Configuration
-Application properties are defined in `src/main/resources/application.properties`.
-Modify them as needed before running the application.
+## API & Functionality
 
-## API Endpoints
-
-**Note:** Make sure to load data first using `/load` before attempting to read it from the database.
-
-### Load Data
-**GET /load**
-```
-http://localhost:8081/api/users/load
-```
-Loads data from [https://dummyjson.com/users](https://dummyjson.com/users) and stores it in the H2 database.
-
-### Search Users
-**GET /search**
-```
-http://localhost:8081/api/users/search
-```
-Search users based on `firstName`, `lastName`, and `ssn`.
-
-### Get All Users
-**GET /get-all-users**
-```
-http://localhost:8081/api/users/get-all-users
-```
-Retrieves all users from the database.
-
-### Get User by ID
-**GET /get-by-id**
-```
-http://localhost:8081/api/users/get-by-id
-```
-Fetches a user by their ID.
-
-### Get User by Email
-**GET /get-by-email**
-```
-http://localhost:8081/api/users/get-by-email
-```
-Retrieves users by email.
-
-## Docker Support
-To build and run the application using Docker:
-```sh
-docker build -t my-spring-app .
-docker run -p 8080:8080 my-spring-app
-```
+- Fetch users from `https://dummyjson.com/users` at startup
+- Store in a local in-memory database (backend)
+- Search users by first name, last name, or SSN (frontend UI)
+- Clicking on a user displays their full details
 
 ## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-## Contributing
-Feel free to submit issues or pull requests to enhance the project.
+This project is licensed under the MIT License.
 
-## Contact
-For questions or support, contact [ashwesh.chn@gmail.com].

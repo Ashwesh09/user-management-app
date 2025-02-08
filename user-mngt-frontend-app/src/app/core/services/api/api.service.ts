@@ -3,10 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { catchError, Observable, of } from 'rxjs';
  
 @Injectable({
-  providedIn: 'root', // This makes the service available throughout the app
+  providedIn: 'root', 
 })
 export class ApiService {
-  private baseUrl = 'http://localhost:8081/api/users'; // Replace with your API URL
+  private baseUrl = 'http://localhost:8080/api/users'; 
  
   constructor(public http: HttpClient) {}
  

@@ -1,27 +1,85 @@
-# UserMngtFrontendApp
+# User Management App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+A user management application built with Angular and Angular Material. This app allows to search users based on first name, last name and ssn also showing users data.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- To search employee on first name, last name and SSN.
+- Angular Material UI components
+- Responsive design
+- Routing with Angular Router
+- Form validation with Reactive Forms
 
-## Code scaffolding
+## Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ensure you have the following installed before proceeding:
 
-## Build
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [Angular CLI](https://angular.io/cli)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
 
-## Running unit tests
+Clone the repository and navigate to the project directory:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```sh
+git clone <repository-url>
+cd user-management-app
+```
 
-## Running end-to-end tests
+Install dependencies:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```sh
+npm install
+```
 
-## Further help
+## Running the Application
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Start the development server:
+
+```sh
+ng serve
+```
+
+The app will be available at `http://localhost:4200/`.
+
+## Build for Production
+
+To build the project for production, run:
+
+```sh
+ng build --prod
+```
+
+The output will be in the `dist/` directory.
+
+## Code Structure
+
+```sh
+src/
+├── app/
+│   ├── components/  # Reusable UI components
+│   ├── core/  # service and model
+│   ├── app.module.ts # Main Angular module
+│   ├── app-routing.module.ts # App routing configuration
+│   └── ...
+├── assets/          # Static assets (icons, images, etc.)
+├── environments/    # Environment-specific settings
+└── ...
+```
+
+## Technologies Used
+
+- **Angular** - Frontend framework
+- **Angular Material** - UI component library
+- **RxJS** - Reactive programming
+- **TypeScript** - Strongly typed Typescript
+- **SCSS** - Styling
+
+## Contribution
+
+Feel free to fork this repository and contribute improvements via pull requests.
+
+## License
+
+This project is licensed under the MIT License.
+

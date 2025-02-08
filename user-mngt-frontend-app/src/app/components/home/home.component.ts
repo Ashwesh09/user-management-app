@@ -81,7 +81,7 @@ export class HomeComponent implements OnInit {
     this.filteredOptions = this.searchControl.valueChanges.pipe(
       debounceTime(300),
       startWith(''),
-      switchMap(value => (value ? this._apiService.searchUsers(value) : this._apiService.getAllUsers())) // Call API or return empty
+      switchMap(value => (value ? this._apiService.searchUsers(value) : this._apiService.getAllUsers()))
     );
   }
  
@@ -101,7 +101,7 @@ export class HomeComponent implements OnInit {
   onUserSelected(event: any) {
     const selectedUser: any = event.option.value;
     if (selectedUser) {
-      this.router.navigate([`/user/${selectedUser.id}`]); // Redirect to user details page
+      this.router.navigate([`/user/${selectedUser.id}`]); 
     }
   }
   onReload(){
