@@ -1,16 +1,10 @@
 package com.user.management.app.exception;
 
 import jakarta.persistence.EntityNotFoundException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.slf4j.MDC;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.web.client.HttpStatusCodeException;
-import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
@@ -19,7 +13,7 @@ import java.util.Map;
 
 
 @RestControllerAdvice
-public class UserManagementExceptionHandler extends ResponseEntityExceptionHandler {
+public class UserManagementExceptionHandler  {
 
 
     // Handle Entity Not Found Exception (JPA)
