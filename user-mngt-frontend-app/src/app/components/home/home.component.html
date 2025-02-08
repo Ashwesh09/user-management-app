@@ -1,0 +1,48 @@
+<mat-toolbar color="primary" class="toolbar">
+    <span class="app-title">User Management</span>
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="onReload()" matTooltip="Reload Data">
+      <mat-icon>refresh</mat-icon>
+    </button>
+  </mat-toolbar>
+   
+   
+<div class="search-container">
+    <mat-form-field class="search-box" appearance="outline">
+      <mat-label>Search User</mat-label>
+      <input
+        type="text"
+        matInput
+        [formControl]="searchControl"
+        [matAutocomplete]="auto"
+        [value]="displayFn(searchControl.value)"
+      />
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="onUserSelected($event)">
+        <mat-option *ngFor="let user of filteredOptions | async" [value]="user">
+          <div class="user-option">
+            <img [src]="user.image" alt="{{ user.firstName }}" class="user-image" />
+            <div class="user-info">
+              <div class="user-name">{{ user.firstName }} {{ user.lastName }}</div>
+              <div class="user-details">ID: {{ user.id }} | SSN: {{ user.ssn }}</div>
+              <div class="user-email">{{ user.email }}</div>
+            </div>
+          </div>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+
+
+  <footer class="footer">
+    <span>© 2025 User Management App</span>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/ashwesh-alone-a86bb42a6/" target="_blank">
+        <mat-icon>language</mat-icon> LinkedIn
+      </a>
+      <a href="https://github.com/Ashwesh09/user-management-app" target="_blank">
+        <mat-icon>code</mat-icon> GitHub
+      </a>
+    </div>
+  </footer>
+   
+   
