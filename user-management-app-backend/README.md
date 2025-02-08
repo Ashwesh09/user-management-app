@@ -79,7 +79,7 @@ docker run -p 8080:8080 my-spring-app
 ```
 
 ## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the Apache-2.0 license. See the `LICENSE` file for details.
 
 ## Contributing
 Feel free to submit issues or pull requests to enhance the project.

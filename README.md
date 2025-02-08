@@ -13,9 +13,9 @@ A simple user management system that loads data from [dummyjson.com/users](https
 ## Repository Structure
 
 ```
-repo-root/
-├── frontend/    # Angular application with Angular Material
-├── backend/     # Spring Boot backend with in-memory database
+user-management-app/
+├── user-mngt-frontend-app/    # Angular application with Angular Material
+├── user-management-app-backend/     # Spring Boot backend with in-memory database
 ├── README.md    # This file
 └── ...
 ```
