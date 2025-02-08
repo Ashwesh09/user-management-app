@@ -9,6 +9,10 @@ import { MAT_SELECT_SCROLL_STRATEGY_PROVIDER } from "@angular/material/select";
 import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './components/home/home.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatButtonModule } from '@angular/material/button';
  
  
  
@@ -25,7 +29,12 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
         BrowserAnimationsModule,
         HttpClientModule,
         HomeModule,
-        MatProgressBarModule
+        MatProgressBarModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatTooltipModule,
+        MatToolbarModule,
+        MatButtonModule
     ]
 })
 export class AppModule { }

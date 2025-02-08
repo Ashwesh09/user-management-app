@@ -3,12 +3,11 @@ import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {Observable, of} from 'rxjs';
 import {debounceTime, map, startWith, switchMap} from 'rxjs/operators';
 import {MatIconModule} from '@angular/material/icon';
-
+import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-// import { State } from 'src/app/core/model/state';
 import { MatOptionModule } from '@angular/material/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatSelectModule } from '@angular/material/select';
@@ -17,6 +16,7 @@ import { Router } from '@angular/router';
 import { ProgressBarService } from 'src/app/core/services/progress-bar/progress-bar.service';
 import { ApiService } from 'src/app/core/services/api/api.service';
 import { MatButtonModule } from '@angular/material/button';
+import { GlobalReloadService } from 'src/app/core/services/global-reload.service';
  
  
  
@@ -28,7 +28,7 @@ import { MatButtonModule } from '@angular/material/button';
 export class HomeComponent implements OnInit {
  
  
-  constructor(private _apiService: ApiService, private router: Router,private progressBar : ProgressBarService){
+  constructor(private _apiService: ApiService, private router: Router,private progressBar : ProgressBarService,private globalReload : GlobalReloadService){
  
   }
  
@@ -38,10 +38,7 @@ export class HomeComponent implements OnInit {
  
   ngOnInit() {
     this.fetchData();
-    // this.filteredOptions = this.searchControl.valueChanges.pipe(
-    //   startWith(''),
-    //   map(value => this._filter(value || ''))
-    // );
+    this.reloadCheck();
   }
  
  
@@ -55,6 +52,13 @@ export class HomeComponent implements OnInit {
       error: (error : any) => {
         console.error('Error fetching data:', error);
       }
+    });
+  }
+
+  reloadCheck(){
+    this.globalReload.currentData.subscribe(data => {
+        if(data)
+          this.fetchData();
     });
   }
  
@@ -118,7 +122,8 @@ export class HomeComponent implements OnInit {
     MatAutocompleteModule,
     MatIconModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTooltipModule
   ],
   providers: []
 })

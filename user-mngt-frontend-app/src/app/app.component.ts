@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ProgressBarService } from './core/services/progress-bar/progress-bar.service';
+import { GlobalReloadService } from './core/services/global-reload.service';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +9,12 @@ import { ProgressBarService } from './core/services/progress-bar/progress-bar.se
 })
 export class AppComponent {
 
-  constructor(public progressBar : ProgressBarService){
+
+  constructor(public progressBar : ProgressBarService,private globleReload : GlobalReloadService){
 
   }
-
-  fetchData() {
-    console.log("Reloading data...");
-    // Add logic to fetch or refresh data
+  onReload() {
+    this.globleReload.setReloadStatus(true);
   }
-  title = 'user-management-app';
 }
  
