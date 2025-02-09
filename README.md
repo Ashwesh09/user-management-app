@@ -22,10 +22,11 @@ user-management-app/
 
 ## Prerequisites
 
-- Node.js (for frontend)
-- Angular CLI
+- Node.js v20.12.2(for frontend)
+- Angular CLI 15.2.1
 - Java 17+ (for backend)
-- Maven or Gradle (for backend dependencies)
+- Maven 3.9.9(for backend dependencies)
+- Spring Boot v3.4.2
 
 ## Installation & Running
 

@@ -3,8 +3,8 @@
 ## Prerequisites
 Ensure you have the following installed before running the application:
 - **Java 17**
-- **Maven 3.8.7**
-- **Spring Boot** (configured via `pom.xml`)
+- **Maven 3.9.9**
+- **Spring Boot 3.4.2**  (configured via `pom.xml`)
 
 ## Getting Started
 
