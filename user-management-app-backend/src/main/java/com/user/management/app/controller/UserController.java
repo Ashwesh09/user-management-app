@@ -50,8 +50,14 @@ public class UserController {
     @GetMapping("/search")
     @Operation(summary = "Search users based on first name, last name and SSN")
     public List<User> searchUsers(@RequestParam String query) {
-        LOGGER.info("Request received for query :: {}." , query);
-        return userService.searchUsers(query);
+        try {
+            LOGGER.info("Request received for query :: {}.", query);
+            List<User> users = userService.searchUsers(query);
+            LOGGER.info("Response received for query :: {}.", users);
+            return users;
+        } catch (Exception e) {
+            throw new EntityNotFoundException(e);
+        }
     }
 
     @GetMapping("/get-all-users")

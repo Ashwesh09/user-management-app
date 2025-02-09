@@ -6,11 +6,21 @@ import lombok.Data;
 import org.hibernate.search.mapper.pojo.mapping.definition.annotation.FullTextField;
 import org.hibernate.search.mapper.pojo.mapping.definition.annotation.Indexed;
 
+import javax.management.ConstructorParameters;
+import java.beans.ConstructorProperties;
+
 @Data
 @Entity
 @Table(name = "users")
 @Indexed
 public class User {
+
+    public User(String firstName, String lastName,String ssn) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.ssn = ssn;
+    }
+
     @Id
     private Long id;
     @FullTextField
@@ -56,4 +66,8 @@ public class User {
 
     @OneToOne(cascade = CascadeType.ALL)
     private Hair hair;
+
+    public User() {
+
+    }
 }

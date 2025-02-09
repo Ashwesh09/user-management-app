@@ -35,10 +35,17 @@ public class UserManagementExceptionHandler  {
     }
 
     // Handle Generic Exception (Fallback)
+    @ExceptionHandler(UserManagementException.class)
+    public ResponseEntity<Map<String, Object>> handelUserManagementException(Exception ex) {
+        return buildErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, "Unable to fetch data from URL", ex.getMessage());
+    }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Map<String, Object>> handleGlobalException(Exception ex) {
         return buildErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, "Internal Server Error", ex.getMessage());
     }
+
+
 
     // Utility method to structure error responses
     private ResponseEntity<Map<String, Object>> buildErrorResponse(HttpStatus status, String error, String message) {
